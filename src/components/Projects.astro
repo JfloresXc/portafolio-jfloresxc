@@ -1,0 +1,69 @@
+---
+import TailwindIcon from "../components/icons/Tailwind.astro";
+import ReactIcon from "../components/icons/React.astro";
+import NextjsIcon from "../components/icons/Nextjs.astro";
+import FirebaseIcon from "../components/icons/Firebase.astro";
+import ProjectItem from "./ProjectItem.astro";
+
+const TAGS = {
+  TAILWIND: {
+    name: "Tailwind",
+    class: "text-white bg-blue-500",
+    icon: TailwindIcon,
+  },
+  REACT: {
+    name: "React",
+    class: "text-white bg-blue-500",
+    icon: ReactIcon,
+  },
+  FIREBASE: {
+    name: "Firebase",
+    class: "text-white bg-yellow-500",
+    icon: FirebaseIcon,
+  },
+  NEXTJS: {
+    name: "NextJS",
+    class: "text-white bg-blue-500",
+    icon: NextjsIcon,
+  },
+  ASTROJS: {
+    name: "Astro",
+    class: "text-white",
+    icon: TailwindIcon,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Notesbook",
+    description:
+      "En esta app podrás escribir tus propios capítulos, y estos a la vez conteniendo tus notas las cuales podrían ser públicas o privadas.",
+    image: "notebook-mockup.jpg",
+    linkSite: "https://notesbook.vercel.app/",
+    linkRepository: "https://github.com/JfloresXc/notesbook",
+    tags: [TAGS.REACT, TAGS.FIREBASE],
+  },
+];
+---
+
+{
+  PROJECTS.map(
+    ({
+      title,
+      description,
+      image,
+      linkSite,
+      linkRepository,
+      tags,
+    }) => (
+      <ProjectItem
+        title={title}
+        description={description}
+        image={"storage/projects/" + image}
+        linkSite={linkSite}
+        linkRepository={linkRepository}
+        tags={tags}
+      />
+    )
+  )
+}

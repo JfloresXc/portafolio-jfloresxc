@@ -9,12 +9,14 @@ export default {
   theme: {
     colors: {
       primary: "#010f1a",
+      secondary: "#03121e",
       black: colors.black,
       white: colors.white,
       gray: colors.gray,
       emerald: colors.emerald,
       indigo: colors.indigo,
       yellow: colors.yellow,
+      blue: colors.blue,
     },
   },
   plugins: [],

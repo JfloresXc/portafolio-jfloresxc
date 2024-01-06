@@ -5,47 +5,86 @@ import SocialPill from "../components/SocialPill.astro";
 import LinkedinIcon from "../components/icons/Linkedin.astro";
 import GithubIcon from "../components/icons/Github.astro";
 import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import Section from "../components/Section.astro";
+import ExperiencieIcon from "../components/icons/Experiencie.astro";
+import Header from "../components/Header.astro";
+import ProjectIcon from "../components/icons/Project.astro";
+import Projects from "../components/Projects.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+  title="Portafolio de Jose Flores Chamba - Desarrollador y Programador Web con 2 años de experiencia"
+>
   <main>
-    <section class="w-full lg:w-[740px] py-32 dark:text-white">
+    <Section>
+      <Header />
+    </Section>
+    <Section>
       <img
-        class="rounded-full w-8 h-8 mb-3"
+        class="rounded-full w-8 h-8 mb-4"
         src="/storage/jfloresxc-logo.jpeg"
         alt="jflorexc logo"
       />
-      <h1 class="text-5xl font-bold flex flex-row pb-10">
-        Hey, soy jfloresxc <a
+      <h1
+        class="text-3xl lg:text-6xl font-bold flex justify-start items-center gap-x-4 pb-10"
+      >
+        <span class="flex">Hey, soy jfloresxc</span>
+        <a
           href="https://www.linkedin.com/in/jfloresxc/"
           target="_blank"
           rel="noopener noreferrer"
-          class="flex flex-row justify-center items-center ml-4"
+          class="flex text-center"
         >
-          <Bagde>Disponible para trabajar</Bagde>
+          <Bagde class="bg-emerald-600">
+            Disponible para trabajar
+          </Bagde>
         </a>
       </h1>
-      <h2 class="text-wrap text-2xl">
+      <h2 class="text-wrap text-lg lg:text-2xl max-w-[700px]">
         +2 años de experiencia. <span class="dark:text-yellow-200"
           >Desarrollador Web e Ingenierio de Sistemas.</span
         > De Lima, Perú. Especializado en crear aplicaciones únicas.
       </h2>
 
-      <ul class="flex gap-x-4 mt-3">
+      <ul
+        class="flex flex-wrap justify-center lg:justify-normal gap-4 mt-8 lg:mt-10"
+      >
         <SocialPill href="https://www.linkedin.com/in/jfloresxc/">
-          <LinkedinIcon class="w-6 h-6" />
+          <LinkedinIcon class="size-4 lg:size-6" />
           Linkedin
         </SocialPill>
         <SocialPill href="https://jfloresxc.github.io/">
-          <GithubIcon class="w-6 h-6" />
+          <GithubIcon class="size-4 lg:size-6" />
           Github
         </SocialPill>
         <SocialPill href="mailto:jfloresxc@gmail.com">
-          <MailIcon class="w-6 h-6" />
-          Email
+          <MailIcon class="size-4 lg:size-6" />
+          jfloresxc@gmail.com
         </SocialPill>
       </ul>
-    </section>
+    </Section>
+
+    <Section id="experiencia">
+      <h2
+        class="text-xl lg:text-2xl font-bold flex items-center gap-x-3 mb-6"
+      >
+        <ExperiencieIcon class="size-5" />
+        <span>Experiencia</span>
+      </h2>
+      <Experience />
+    </Section>
+
+    <Section id="proyectos">
+      <h2
+        class="text-xl lg:text-2xl font-bold flex items-center gap-x-3 mb-6"
+      >
+        <ProjectIcon class="size-5" />
+        <span>Proyectos</span>
+      </h2>
+      <Projects />
+    </Section>
   </main>
 </Layout>
 
